@@ -20,7 +20,7 @@ class ArrayList
 public:
 	ArrayList() = default;
 
-	ArrayList(const size_t& size): mContents{new T[size]}, mSize(size), mMaxSize(size) {}
+	ArrayList(const size_t& size): mSize(size), mMaxSize(size), mContents{new T[size]} {}
 
 	ArrayList(const ArrayList<T> &other): mSize(other.mSize),
 						mMaxSize(other.mMaxSize),
@@ -92,7 +92,7 @@ public:
 		mContents.reset();
 		mSize = 0;
 
-		if (mContents == nullptr) { cout << "It nulls the contents\n"; }
+		if (mContents == nullptr) { cout << "Reset: Frees any memory occupied by the container\n"; }
 	}
 
 	size_t size() const{

@@ -54,4 +54,8 @@ int main(){
 	arr2.reserve(30);
 	for(u32 i=0; i<30; i++)
 		arr2.push_back(i);
+
+	ArrayList<int> arr0;
+	arr0.push_back(10);
+	cout << arr0.size() << endl;
 }
